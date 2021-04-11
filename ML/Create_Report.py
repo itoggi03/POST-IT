@@ -108,7 +108,7 @@ for row in my_dict:
     
     # view count 순 정렬 for most_error
     view_count = row["view_count"]
-    if max_view[category_num] < view_count:
+    if max_view[category_num] <= view_count:
         max_view[category_num] = view_count
         most_error.append({
             "contentId" : row["contentId"],
@@ -119,7 +119,7 @@ for row in my_dict:
         
     # most vote 
     vote_count = row["up_vote_count"]
-    if max_vote < vote_count:
+    if max_vote <= vote_count:
         max_vote = vote_count
         most_vote.append({
             "contentId" : row["contentId"],
